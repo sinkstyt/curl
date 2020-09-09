@@ -46,6 +46,13 @@ char *Curl_dyn_ptr(const struct dynbuf *s);
 unsigned char *Curl_dyn_uptr(const struct dynbuf *s);
 size_t Curl_dyn_len(const struct dynbuf *s);
 
+#define curlx_dyn_init Curl_dyn_init
+#define curlx_dyn_add Curl_dyn_add
+#define curlx_dyn_free Curl_dyn_free
+#define curlx_dyn_ptr Curl_dyn_ptr
+#define curlx_dyn_reset Curl_dyn_reset
+#define curlx_dynbuf dynbuf
+
 /* Dynamic buffer max sizes */
 #define DYN_DOH_RESPONSE    3000
 #define DYN_DOH_CNAME       256
