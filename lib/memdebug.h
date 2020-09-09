@@ -84,7 +84,7 @@ CURL_EXTERN FILE *curl_dbg_fdopen(int filedes, const char *mode,
 
 CURL_EXTERN int curl_dbg_fclose(FILE *file, int line, const char *source);
 
-#ifndef MEMDEBUG_NODEFINES
+#if !defined(MEMDEBUG_NODEFINES) && defined(BUILDING_LIBCURL)
 
 /* Set this symbol on the command-line, recompile all lib-sources */
 #undef strdup
